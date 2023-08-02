@@ -56,8 +56,9 @@
 
         const buffer = await file.arrayBuffer();
 
-        setFormValue(`input[name="f[${currentFormIndex}][file_size]"]`, "Calculating...");
+        setFormValue(`input[name="f[${currentFormIndex}][file_size]"]`, file.size);
 
+        setFormValue(`input[name="f[${currentFormIndex}][file_crc32]"]`, "Calculating...");
         const crc32 = await hashwasm.crc32(new Uint8Array(buffer));
         setFormValue(`input[name="f[${currentFormIndex}][file_crc32]"]`, crc32);
 

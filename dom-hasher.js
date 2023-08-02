@@ -57,7 +57,7 @@
 
         // Check file size, if more than 2GB, alert and continue with the next file
         if (file.size > 2 * 1024 * 1024 * 1024) { // 2GB in bytes
-          alert("This file is too large to hash. Please use a separate hashing program instead.");
+          alert("This file is too large to hash. Please use a dedicated hashing program instead.");
           continue;
         }
 

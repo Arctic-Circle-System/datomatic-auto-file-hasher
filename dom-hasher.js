@@ -56,17 +56,20 @@
 
         const buffer = await file.arrayBuffer();
 
-        setFormValue(`input[name="f[${currentFormIndex}][file_size]"]`, file.size);
+        setFormValue(`input[name="f[${currentFormIndex}][file_size]"]`, "Calculating...");
 
         const crc32 = await hashwasm.crc32(new Uint8Array(buffer));
         setFormValue(`input[name="f[${currentFormIndex}][file_crc32]"]`, crc32);
 
+        setFormValue(`input[name="f[${currentFormIndex}][file_md5]"]`, "Calculating...");
         const md5 = await hashwasm.md5(new Uint8Array(buffer));
         setFormValue(`input[name="f[${currentFormIndex}][file_md5]"]`, md5);
 
+        setFormValue(`input[name="f[${currentFormIndex}][file_sha1]"]`, "Calculating...");
         const sha1 = await createHash('SHA-1', buffer);
         setFormValue(`input[name="f[${currentFormIndex}][file_sha1]"]`, sha1);
 
+        setFormValue(`input[name="f[${currentFormIndex}][file_sha256]"]`, "Calculating...");
         const sha256 = await createHash('SHA-256', buffer);
         setFormValue(`input[name="f[${currentFormIndex}][file_sha256]"]`, sha256);
 

@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         DAT-o-MATIC Auto File Hasher
 // @namespace    http://tampermonkey.net/
+// @author       rarenight
 // @version      1.0
 // @description  Auto-calculates and auto-hashes Size, CRC32, MD5, SHA-1, and SHA-256 hashes when you drag and drop a file into the File Submit window on No-Intro's DAT-o-MATIC
 // @match        https://datomatic.no-intro.org/*

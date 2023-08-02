@@ -34,6 +34,12 @@
     window.ondrop = async (event) => {
       event.preventDefault();
 
+        setFormValue(`input[name="f[${currentFormIndex}][file_size]"]`, "Calculating...");
+        setFormValue(`input[name="f[${currentFormIndex}][file_crc32]"]`, "Calculating...");
+        setFormValue(`input[name="f[${currentFormIndex}][file_md5]"]`, "Calculating...");
+        setFormValue(`input[name="f[${currentFormIndex}][file_sha1]"]`, "Calculating...");
+        setFormValue(`input[name="f[${currentFormIndex}][file_sha256]"]`, "Calculating...");
+
       function setFormValue(fieldName, value) {
         const fieldElement = document.querySelector(fieldName);
         if (fieldElement) {
@@ -55,12 +61,6 @@
         }
 
         const buffer = await file.arrayBuffer();
-
-        setFormValue(`input[name="f[${currentFormIndex}][file_size]"]`, "Calculating...");
-        setFormValue(`input[name="f[${currentFormIndex}][file_crc32]"]`, "Calculating...");
-        setFormValue(`input[name="f[${currentFormIndex}][file_md5]"]`, "Calculating...");
-        setFormValue(`input[name="f[${currentFormIndex}][file_sha1]"]`, "Calculating...");
-        setFormValue(`input[name="f[${currentFormIndex}][file_sha256]"]`, "Calculating...");
 
         setFormValue(`input[name="f[${currentFormIndex}][file_size]"]`, file.size);
 

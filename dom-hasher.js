@@ -82,7 +82,6 @@
         const sha256 = await createHash('SHA-256', buffer);
         setFormValue(`input[name="f[${currentFormIndex}][file_sha256]"]`, sha256);
 
-        // Toggle between 0 and 1 for the next file
         currentFormIndex = 1 - currentFormIndex;
       }
     };

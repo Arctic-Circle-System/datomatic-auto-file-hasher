@@ -6,6 +6,5 @@ To-Use:
 2. [Download](https://github.com/rarenight/datomatic-auto-file-hasher/raw/main/dom-hasher.js) this script to your hard drive (right click + save file).
 3. Open Tampermonkey's Dashboard, drag the script file into it, and press "Install."
 4. Now when datting on DAT-o-MATIC in the Submit File page, drag and drop the file onto the page.
-6. Wait for the hashes to auto-populate on-screen. This may take a while for large files. **I am not responsible for Out of Memory crashes.**
-
-To-Do: Add functionality for the second set of hashes on the File Submit page.
+6. Wait for the hashes to auto-populate on-screen in the first set of fields (e.g. Decrypted). This may take a while for large files. **I am not responsible for Out of Memory crashes.**
+7. If you drag a second file onto the screen, hashes will auto-populate on-screen in the second set of fields (e.g. Encrypted).

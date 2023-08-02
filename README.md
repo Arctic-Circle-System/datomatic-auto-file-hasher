@@ -8,4 +8,5 @@ To-Use:
 4. Now, in the File Submit / Add File page when datting, drag and drop the file you want to hash into the page.
 5. Wait for the hashes to auto-populate on-screen. This may take a while for large files. **I am not responsible for Out of Memory crashes.**
 
-To-Do: Add functionality for the second set of hashes on the File Submit page.
+To-Do:
+Add functionality for the second set of hashes on the File Submit page.

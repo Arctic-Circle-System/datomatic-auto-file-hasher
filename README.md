@@ -1,5 +1,5 @@
 # DAT-o-MATIC Auto File Hasher
-Tampermonkey JS that auto-calculates and auto-hashes Size, CRC32, MD5, SHA-1, and SHA-256 hashes when you drag and drop a file into the File Submit page on No-Intro's DAT-o-MATIC
+JavaScript intended as a Tampermonkey script for Chromium browsers that auto-calculates and auto-hashes Size, CRC32, MD5, SHA-1, and SHA-256 hashes when you drag and drop a file into the File Submit page on No-Intro's DAT-o-MATIC.
 
 To-Use:
 1. Install [Tampermonkey](https://www.tampermonkey.net/).

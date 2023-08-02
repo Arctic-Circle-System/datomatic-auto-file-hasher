@@ -34,11 +34,6 @@
     window.ondrop = async (event) => {
       event.preventDefault();
 
-        setFormValue(`input[name="f[${currentFormIndex}][file_size]"]`, "Calculating...");
-        setFormValue(`input[name="f[${currentFormIndex}][file_crc32]"]`, "Calculating...");
-        setFormValue(`input[name="f[${currentFormIndex}][file_md5]"]`, "Calculating...");
-        setFormValue(`input[name="f[${currentFormIndex}][file_sha1]"]`, "Calculating...");
-        setFormValue(`input[name="f[${currentFormIndex}][file_sha256]"]`, "Calculating...");
 
       function setFormValue(fieldName, value) {
         const fieldElement = document.querySelector(fieldName);
@@ -56,9 +51,21 @@
       for (let i = 0; i < files.length; i++) {
         const file = files[i];
         if (!(file instanceof File)) {
-          console.error('Not a file:', file);
+          alert("Not a file:", file);
           continue;
         }
+
+        // Check file size, if more than 2GB, alert and continue with the next file
+        if (file.size > 2 * 1024 * 1024 * 1024) { // 2GB in bytes
+          alert("This file is too large to hash. Please use a separate hashing program instead.");
+          continue;
+        }
+
+        setFormValue(`input[name="f[${currentFormIndex}][file_size]"]`, "Calculating...");
+        setFormValue(`input[name="f[${currentFormIndex}][file_crc32]"]`, "Calculating...");
+        setFormValue(`input[name="f[${currentFormIndex}][file_md5]"]`, "Calculating...");
+        setFormValue(`input[name="f[${currentFormIndex}][file_sha1]"]`, "Calculating...");
+        setFormValue(`input[name="f[${currentFormIndex}][file_sha256]"]`, "Calculating...");
 
         const buffer = await file.arrayBuffer();
 

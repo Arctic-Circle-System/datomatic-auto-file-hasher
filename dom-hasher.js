@@ -14,6 +14,8 @@
 (function() {
     'use strict';
 
+    let currentFormIndex = 0;
+
     const supported = (() => {
       try {
         if (typeof WebAssembly === 'object'
@@ -54,19 +56,22 @@
 
         const buffer = await file.arrayBuffer();
 
-        setFormValue('input[name="f[0][file_size]"]', file.size);
+        setFormValue(`input[name="f[${currentFormIndex}][file_size]"]`, file.size);
 
         const crc32 = await hashwasm.crc32(new Uint8Array(buffer));
-        setFormValue('input[name="f[0][file_crc32]"]', crc32);
+        setFormValue(`input[name="f[${currentFormIndex}][file_crc32]"]`, crc32);
 
         const md5 = await hashwasm.md5(new Uint8Array(buffer));
-        setFormValue('input[name="f[0][file_md5]"]', md5);
+        setFormValue(`input[name="f[${currentFormIndex}][file_md5]"]`, md5);
 
         const sha1 = await createHash('SHA-1', buffer);
-        setFormValue('input[name="f[0][file_sha1]"]', sha1);
+        setFormValue(`input[name="f[${currentFormIndex}][file_sha1]"]`, sha1);
 
         const sha256 = await createHash('SHA-256', buffer);
-        setFormValue('input[name="f[0][file_sha256]"]', sha256);
+        setFormValue(`input[name="f[${currentFormIndex}][file_sha256]"]`, sha256);
+
+        // Toggle between 0 and 1 for the next file
+        currentFormIndex = 1 - currentFormIndex;
       }
     };
 

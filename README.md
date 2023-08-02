@@ -4,7 +4,7 @@ JavaScript intended as a Tampermonkey script for Chromium browsers that auto-cal
 To-Use:
 1. Install [Tampermonkey](https://www.tampermonkey.net/).
 2. [Download](https://github.com/rarenight/datomatic-auto-file-hasher/raw/main/dom-hasher.js) this script to your hard drive.
-3. Open Tampermonkey's [Dashboard](chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/options.html#nav=dashboard) and drag the script file into it and press "Install."
+3. Open Tampermonkey's Dashboard, drag the script file into it, and press "Install."
 4. When you add an entry in DAT-o-MATIC and you click the "Add File" button, you are brought to the File Submit page.
 5. When in the File Submit page, drag and drop the file you want to hash.
 6. Wait for the hashes to auto-populate. This may take a while for large files. **I am not responsible for Out of Memory crashes.**

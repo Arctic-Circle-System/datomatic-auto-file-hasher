@@ -18,7 +18,7 @@
 (function() {
     'use strict';
 
-    if (window.location.href.includes("page=show_record")) {
+    if (window.location.href.includes("page=attachments")) {
         return;
     }
 

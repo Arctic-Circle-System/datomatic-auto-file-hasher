@@ -4,7 +4,7 @@
 // @author       rarenight
 // @version      1.0
 // @description  Auto-hashes and auto-inputs the Size, CRC32, MD5, SHA-1, and SHA-256 fields when you drag and drop a file onto the Submit File page in No-Intro's DAT-o-MATIC
-// @match        https://datomatic.no-intro.org/*
+// @match        https://datomatic.no-intro.org/index.php?page=submit*
 // @grant        none
 // ==/UserScript==
 // hash-wasm (https://www.npmjs.com/package/hash-wasm) (c) Dani Biro, license MIT

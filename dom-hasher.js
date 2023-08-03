@@ -18,6 +18,10 @@
 (function() {
     'use strict';
 
+    if (window.location.href.includes("page=show_record")) {
+        return;
+    }
+
     let currentFormIndex = 0;
 
     const supported = (() => {

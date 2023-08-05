@@ -7,4 +7,4 @@ To Use:
 3. Open Tampermonkey's Dashboard, drag the script file into it, and press "Install."
 4. When datting on DAT-o-MATIC in the Submit File or Edit File page, drag and drop the file onto the page.
 6. Wait for the hashes to auto-populate on-screen in the first set of fields (e.g. Decrypted).  **This takes a while for large files. I am not responsible for Out of Memory crashes.**
-7. If you drag a second file onto the screen, hashes will auto-populate on-screen in the second set of fields (e.g. Encrypted). Repeat if there are extra fields on-screen or refresh the page to reset.
+7. If you drag a second file onto the screen, hashes will auto-populate on-screen in the second set of fields (e.g. Encrypted). You can then drag more files onto the screen for third, fourth, etc. sets of hashes, or refresh the page to reset the script.

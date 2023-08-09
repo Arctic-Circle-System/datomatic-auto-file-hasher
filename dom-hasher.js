@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @author       rarenight
 // @version      5.0
-// @description  Auto-hashes and auto-inputs the Size, CRC32, MD5, SHA-1, and SHA-256 fields when you drag and drop a file onto the Submit File page in No-Intro's DAT-o-MATIC
+// @description  Auto-hashes and auto-inputs the Size, CRC32, MD5, SHA-1, and SHA-256 fields when you drag and drop a file onto the Submit File or Edit File page in No-Intro's DAT-o-MATIC
 // @match        https://datomatic.no-intro.org/*
 // @grant        none
 // ==/UserScript==
